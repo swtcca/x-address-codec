@@ -1,6 +1,7 @@
 'use strict';
 /*eslint-disable comma-spacing*/
 
+const Buffer = require('buffer').Buffer;
 const hash = require('hash.js');
 const BN = require('bn.js');
 const _ = require('lodash');
@@ -28,7 +29,7 @@ function bnFactory(bytes) {
 }
 
 function hexToByteArray(hex) {
-  return new Buffer(hex, 'hex').toJSON().data;
+  return new Buffer.from(hex, 'hex').toJSON().data;
 }
 
 const codecMethods = {
@@ -123,7 +124,7 @@ describe('apiFactory', function() {
   });
   describe('Buffer encoding', function() {
     it('can encode zero address', function() {
-      const buf = new Buffer(TWENTY_ZEROES);
+      const buf = new Buffer.from(TWENTY_ZEROES);
       const encoded = encode(buf, {version: 0});
       assert.equal(encoded, 'rrrrrrrrrrrrrrrrrrrrrhoLvTp');
     });
