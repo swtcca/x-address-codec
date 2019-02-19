@@ -1,6 +1,6 @@
 {
   "name": "swtc-x-address-codec",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "license": "ISC",
   "description": "crypto currency address codec",
   "files": [
