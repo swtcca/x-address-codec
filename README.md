@@ -8,9 +8,9 @@ to the menu.
 * ripple
 * tipple
 * bitcoin
-* stellar
-* swtc
+* jingtum 
 * bizain
+* stellar
 
 # API
 
